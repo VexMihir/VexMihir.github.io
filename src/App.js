@@ -85,6 +85,7 @@ particles.forEach((el, i, ra) => {
       <div class = "spacer">
       </div>
       <Switch/>
+      <ContactButton/>
 
     </div>
   );
