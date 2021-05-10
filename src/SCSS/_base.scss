@@ -1,0 +1,161 @@
+@use "theme";
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  ::selection {
+    background: theme.$yellow;
+  }
+
+  .spacer {
+    width: 100vw;
+    height: 10px
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: theme.$off-white;
+    color: theme.$dark-grey;
+    font-family: theme.$Apercu;
+    line-height: 1.5;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+  
+    &.night {
+      background-color: theme.$night;
+      color: theme.$slate;
+      ::selection {
+        color: theme.$black;
+        background: theme.$yellow;
+      }
+      .switch-wrapper {
+        .sun {
+          background: url('../Images/switch/sun-white.svg') no-repeat center;
+          background-size: 100%;
+        }
+        .moon {
+          background: url('../Images/switch/moon-white.svg') no-repeat center;
+          background-size: 100%;
+        }
+      }
+      a,
+      strong,
+      .intro,
+      .skills .skillz__category__label,
+      .experience .job__time,
+      .footer__copyright,
+      .status {
+        color: theme.$off-white;
+      }
+      .section__content .underline-link:after {
+        background: theme.$off-white;
+      }
+    }
+  }
+  
+  a {
+    @include theme.transition;
+    text-decoration: none;
+    font-weight: 700;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+  
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  strong {
+    font-weight: 700;
+    color: theme.$black;
+  }
+  
+  .emoji {
+    display: inline-block;
+    vertical-align: text-top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
+  
+  .small {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 15px;
+    &:after {
+      display: none;
+    }
+  }
+  #rocket-button {
+    @include theme.transition;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    position: fixed;
+    bottom: 25px;
+    left: 10px;
+    cursor: pointer;
+    display: none;
+    @include theme.desktop {
+      bottom: 20px;
+      right: 7px;
+      width: 35px;
+    }
+    @include theme.mobile {
+      bottom: 15px;
+      right: 3px;
+    }
+  
+    &:hover,
+    &:focus {
+      transform: translateY(-10px);
+    }
+    img {
+      width: 100%;
+    }
+  }
+  
+  .waypoint {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    transition: opacity 0.6s cubic-bezier(0.694, 0, 0.335, 1),
+      transform 0.6s cubic-bezier(0.694, 0, 0.335, 1);
+  }
+  
+  .in-view {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  

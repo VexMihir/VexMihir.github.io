@@ -1,0 +1,58 @@
+
+
+* {
+-webkit-transition-property: all;
+-webkit-transition-duration: .4s;
+-moz-transition-timing-function: cubic-bezier(100,50,21,6);
+-moz-transition-property: all;
+-moz-transition-duration: .5s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+
+
+.btn {
+
+  position: relative;
+  display: inline-block;
+  width: 166px;
+  height: inherit;
+  font-size: 1.75 rem;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  color: #FF2C75;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn svg {
+  position: absolute;
+  top: 0; left: 0;
+}
+.btn svg rect {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1;
+  stroke-dasharray: 422, 0;
+  transition: all 0.35 linear;
+  
+  //@include transition(all 1300ms $ease-out-expo);
+}
+.btn:hover svg rect {
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  stroke-width: 2.5;
+  stroke-dasharray: 10, 310;
+  stroke-dashoffset: 33;
+}
+
+.btn:hover {
+  color:#FF2C75;
+  font-size:20px;
+  letter-spacing:1px;
+  font-weight:bold;
+}
+
