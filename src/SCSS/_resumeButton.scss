@@ -1,4 +1,4 @@
-
+@use "theme";
 
 * {
 -webkit-transition-property: all;
@@ -39,7 +39,7 @@
   stroke-dasharray: 422, 0;
   transition: all 0.35 linear;
   
-  //@include transition(all 1300ms $ease-out-expo);
+  // @include theme.transition(all 1300ms $ease-out-expO);
 }
 .btn:hover svg rect {
   transition-duration: 600ms;

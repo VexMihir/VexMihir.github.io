@@ -1,12 +1,11 @@
 import './SCSS/Main.scss';
 import Switch from "./Components/Switch.js"
 import Navbar from "./Components/Navbar.js"
+import Intro from "./Components/Intro.js"
 import ContactButton from "./Components/ContactButton.js"
-// import Rocket from "./Components/Rocket.js"
-import $ from 'jquery'
 
 function App() {
-   const colors = ["#3CC157", "#2AA7FF", "#FCBC0F", "#F85F36"];
+ const colors = ["#3CC157", "#2AA7FF", "#FCBC0F", "#F85F36"];
   const numBalls = 40;
   const particles = [];
 
@@ -77,7 +76,7 @@ particles.forEach((el, i, ra) => {
     }
   );
   });  
-}
+} 
  
   return (
     <div classname = "main">
@@ -85,8 +84,7 @@ particles.forEach((el, i, ra) => {
       <div class = "spacer">
       </div>
       <Switch/>
-      <ContactButton/>
-
+      <Intro/>
     </div>
   );
 }

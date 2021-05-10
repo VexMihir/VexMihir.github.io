@@ -1,0 +1,116 @@
+@use "theme";
+
+.intro {
+    padding: 120px 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include theme.weird-medium {
+      padding: 120px 70px;
+    }
+    @include theme.phablet {
+      padding: 120px 50px;
+    }
+    @include theme.mobile {
+      padding: 70px 50px;
+    }
+  
+    &__hello, &__tagline {
+      font-size: 2.5rem;
+      @include theme.desktop {
+        font-size: 2.25rem;
+      }
+      @include theme.tablet {
+        font-size: 2rem;
+      }
+      @include theme.phablet {
+        font-size: 1.75rem;
+      }
+      @include theme.small-mobile {
+        font-size: 1.5rem;
+      }
+      @include theme.tiny-mobile {
+        font-size: 1.4rem;
+      }
+      .emoji {
+        width: 40px;
+        height: 40px;
+        @include theme.desktop {
+          width: 35px;
+          height: 35px;
+        }
+        @include theme.tablet {
+          width: 30px;
+          height: 30px;
+        }
+        @include theme.small-mobile {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    &__hello {
+      font-weight: 300;
+      .wave-hand {
+        background: url('../Images/wave.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: text-top;
+        background-size: contain;
+        background-position: center;
+        margin-left: 10px;
+        object-fit: scale-down;
+        cursor: pointer;
+
+      &.animated {
+        animation-name: wave;
+        animation-duration: 1s;
+        animation-play-state: paused;
+        animation-fill-mode: initial;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+      }
+      &.animated:hover::after {
+        animation-play-state: running; /* Play animation on mouse hover */
+      }
+      
+     
+     
+
+      @keyframes wave {
+        from {
+          transform: none;
+        }
+        15% {
+          transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        }
+        30% {
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+        }
+        45% {
+          transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        }
+        60% {
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+        }
+        75% {
+          transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+        }
+        to {
+          transform: none;
+        }
+      }
+      }
+    }
+    &__tagline {
+      font-weight: 300;
+      max-width: 700px;
+      .name {
+        font-weight: 700;
+      }
+    }
+  }
+  
