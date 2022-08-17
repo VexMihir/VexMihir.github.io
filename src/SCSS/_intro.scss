@@ -11,29 +11,11 @@
     @include theme.weird-medium {
       padding: 120px 70px;
     }
-    @include theme.phablet {
-      padding: 120px 50px;
-    }
-    @include theme.mobile {
-      padding: 70px 50px;
-    }
   
     &__hello, &__tagline {
       font-size: 2.5rem;
       @include theme.desktop {
         font-size: 2.25rem;
-      }
-      @include theme.tablet {
-        font-size: 2rem;
-      }
-      @include theme.phablet {
-        font-size: 1.75rem;
-      }
-      @include theme.small-mobile {
-        font-size: 1.5rem;
-      }
-      @include theme.tiny-mobile {
-        font-size: 1.4rem;
       }
       .emoji {
         width: 40px;
@@ -41,14 +23,6 @@
         @include theme.desktop {
           width: 35px;
           height: 35px;
-        }
-        @include theme.tablet {
-          width: 30px;
-          height: 30px;
-        }
-        @include theme.small-mobile {
-          width: 25px;
-          height: 25px;
         }
       }
     }

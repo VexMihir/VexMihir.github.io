@@ -4,6 +4,7 @@ import ContactButton from "./ContactButton.js"
 
 class Intro extends React.Component {
 
+
   render() {
       return (
         <header class="intro">
@@ -12,7 +13,7 @@ class Intro extends React.Component {
   </h1>
 
   <h2 class="intro__tagline">I'm
-    <span class="name"> Mihir Bhandari</span>, something &amp; something
+    <span class="name"> Mihir Bhandari</span>, an aspiring software &amp; web developer
     <span class="emoji technologist"></span>
   </h2>
 

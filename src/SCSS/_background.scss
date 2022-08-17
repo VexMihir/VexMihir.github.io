@@ -1,0 +1,64 @@
+@use "theme";
+
+.section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 170px;
+    @include theme.thirteen {
+      padding: 100px;
+    }
+    @include theme.desktop {
+      padding: 50px;
+    }
+    &__title {
+      flex-shrink: 0;
+      width: 200px;
+      margin-right: 70px;
+      color: theme.$blue;
+      text-transform: uppercase;
+      text-align: right;
+      font-weight: 700;
+      letter-spacing: 2px;
+      @include theme.desktop {
+        margin-right: 50px;
+      }
+      @include theme.little-desktop {
+        width: 150px;
+      }
+    }
+    &__content {
+      font-weight: 300;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 650px;
+      p {
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+      .underline-link {
+        position: relative;
+        display: inline-block;
+        &:after {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: theme.$black;
+          content: '';
+          opacity: 0;
+          transition: height 0.3s, opacity 0.3s, transform 0.3s;
+          transform: translateY(-5px);
+        }
+        &:hover,
+        &:focus {
+          &:after {
+            height: 2px;
+            border-radius: 3px;
+            opacity: 1;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }

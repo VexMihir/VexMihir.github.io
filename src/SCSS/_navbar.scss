@@ -1,14 +1,11 @@
 @use "theme";
 
 $perspective:     60rem;
-$font-size:       1.75rem;
-$split-position:  49%;
-$split-thickness: 2px;
-$split-color:     #FF2C75;
+$font-size:       1.0rem;
 
 // === Settings =====
 %font-settings {
-  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-family: 'Courier New', monospace;
   font-style: normal;
   font-weight: bolder;
   font-kerning: normal;
@@ -31,6 +28,9 @@ $split-color:     #FF2C75;
   display: flex;
   align-items: center;
   justify-content: center; 
+  body.night {
+    background-color: theme.$night;
+  }
 }
 
 // === Menu <ul> =====
@@ -50,7 +50,7 @@ width: 40vw;
 }
 
 .horizontalgap {
-  width: 70px;
+  width: 40px;
   color: transperent;
 }
 // === Menu item =====
@@ -58,23 +58,7 @@ width: 40vw;
   position: relative;
   color: transparent;
   cursor: pointer;
-  
-  // === Split Line =====
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: $split-position;
-    left: -10%;
-    right: -10%;
-    height: $split-thickness;
-    border-radius: $split-thickness;
-    margin-top: -($split-thickness / 2);
-    background: $split-color;
-    transform: scale(0);
-    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
-    z-index: 1;
-  }
+  color: #ccd6f649;
 }
 .v-gap {
   width:0
@@ -87,32 +71,8 @@ align-items: center;
 vertical-align: middle;
 }
 
-
-// === Top/bottom mask =====
-.Mask {
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  color: $split-color;
-  top: 0;
-  height: $split-position;
-  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
-  
-  span { display: block; }
-}
-
-// === Bottom mask specific =====
-.Mask + .Mask {
-  top: $split-position - 0.1;
-  height: 100 - $split-position + 0.1;
-  
-  span { transform: translateY(-$split-position); }
-}
-
 // === Where the fun stuff happens =====
 .Menu-list-item:hover,
-.Menu-list-item:active {
-  .Mask { color: #ffffff; transform: skewX(12deg) translateX(5px); }
-  .Mask + .Mask { transform: skewX(12deg) translateX(-5px); }
-  &::before { transform: scale(1); }
+.Menu-list-item:active { 
+  color: #64ffda;
 }

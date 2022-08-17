@@ -1,8 +1,5 @@
+@use "theme";
 @import url('https://fonts.googleapis.com/css?family=Mukta:700');
-
-$bg: #f3f8fa;
-$white: #fff;
-$black: #282936;
 
 @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
   transition: $property $duration $ease;
@@ -24,7 +21,7 @@ cb-body {
   justify-content: center;
   margin: 0;
   min-height: 100vh;
-  background: $bg;
+  background: theme.$bg;
 }
 
 button {
@@ -40,7 +37,7 @@ button {
   font-size: inherit;
   font-family: inherit;
   &.learn-more {
-    width: 12rem;
+    width: 13rem;
     height: auto;
     .circle {
       @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
@@ -49,7 +46,7 @@ button {
       margin: 0;
       width: 3rem;
       height: 3rem;
-      background: $black;
+      background: theme.$contact-black;
       border-radius: 1.625rem;
       .icon {
         @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
@@ -57,7 +54,7 @@ button {
         top: 0;
         bottom: 0;
         margin: auto;
-        background: $white;
+        background: theme.$white;
         &.arrow {
           @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
           left: 0.625rem;
@@ -71,8 +68,8 @@ button {
             right: 0.0625rem;
             width: 0.625rem;
             height: 0.625rem;
-            border-top: 0.125rem solid #fff;
-            border-right: 0.125rem solid #fff;
+            border-top: 0.125rem solid theme.$white;
+            border-right: 0.125rem solid theme.$white;
             transform: rotate(45deg);
           }
         }
@@ -81,13 +78,10 @@ button {
     .button-text {
       @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
       position: absolute;
-      top: 0%;
-      left: 0px;
-      right: 0;
-      bottom: 0;
-      padding: 0.75rem 0;
-      margin: 0 0 0 1.85rem;
-      color: #FF2C75;
+      left: 3.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: theme.$red2;
       font-weight: 700;
       line-height: 1.6;
       text-align: center;
@@ -99,13 +93,13 @@ button {
       width: 100%;
       .icon {
         &.arrow {
-        background: $white;
+        background: theme.$white;
         transform: translate(1rem, 0);
         }
       }
     }
     .button-text {
-      color: $white;
+      color: theme.$white;
     }
   }
 }

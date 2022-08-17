@@ -1,15 +1,15 @@
 import './SCSS/Main.scss';
 import Switch from "./Components/Switch.js"
-import Navbar from "./Components/Navbar.js"
 import Intro from "./Components/Intro.js"
-import ContactButton from "./Components/ContactButton.js"
+import Background from './Components/Background';
+import Skills from './Components/Skills';
+import Experience from './Components/Experience';
+import ResumeButton from './Components/ResumeButton';
 
 function App() {
  const colors = ["#3CC157", "#2AA7FF", "#FCBC0F", "#F85F36"];
   const numBalls = 40;
   const particles = [];
-
-
 
  window.onload = function() {
 
@@ -36,7 +36,7 @@ function App() {
   const toggle = document.getElementById('toggle');
   const input = document.getElementById('switch');
 
-
+  const scrollHeight = document.querySelector('.intro').offsetHeight;
 
   if(night) {
     input.checked = true;
@@ -53,6 +53,16 @@ function App() {
     }
   }); 
 
+  // TODO: Emoji Wave 
+  // const hand = document.querySelector('.emoji.wave-hand');
+  
+  // hand.addEventListener('mouseover', function() {
+  //   hand.classList.add('wave');
+  // });
+
+  // hand.addEventListener('mouseout', function() {
+  //   hand.classList.remove('wave');
+  // });
 
 
 // Keyframes
@@ -76,17 +86,19 @@ particles.forEach((el, i, ra) => {
     }
   );
   });  
+
 } 
- 
   return (
     <div classname = "main">
-      <Navbar/>
       <div class = "spacer">
       </div>
       <Switch/>
       <Intro/>
+      <Background/>
+      <Skills/>
+      <ResumeButton/>
     </div>
-  );
+  )
 }
 
 export default App;
