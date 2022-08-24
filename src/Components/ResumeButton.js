@@ -5,7 +5,7 @@ function ResumeButton() {
   return (
     <div class="btn">
       <div class="btn-container">
-        <a href ="https://drive.google.com/file/d/1h0JqwJpE2WECpsGykuW8wH7T8mAiJcHw/view?usp=sharing" target="_blank"><button class="resume">
+        <a href ="https://drive.google.com/file/d/1xFRrQfihr_Y_iFC05TU_9pCwWLRrg-NV/view?usp=sharing" target="_blank"><button class="resume">
           <span class="text">Resume</span>
           <div class="icon-container">
             <div class="icon icon--left">
