@@ -21,33 +21,33 @@ class Skills extends React.Component {
         <td>HTML 5</td>
       </tr>
       <tr>
-        <td>C++</td>
-        <td>Postman</td>
+        <td>Kotlin</td>
+        <td>Node.js/Express</td>
         <td>React</td>
       </tr>
       <tr>
-        <td>Kotlin</td>
-        <td>JIRA</td>
-        <td>SCSS</td>
+        <td>Swift</td>
+        <td>Postman</td>
+        <td>SCSS/CSS</td>
       </tr>
       <tr>
-        <td>Swift</td>
-        <td>Command Line</td>
         <td>JavaScript</td>
+        <td>MongoDB</td>
+        <td>Redux</td>
       </tr>
       <tr>
         <td>TypeScript</td>
-        <td>Appium</td>
-        <td>&nbsp;</td>
+        <td>JUnit</td>
+        <td>Tailwind</td>
       </tr>
       <tr>
         <td>Python</td>
-        <td>LaTeX</td>
-        <td>&nbsp;</td>
+        <td>Appium</td>
+        <td>Material UI</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td>JSON</td>
+        <td>GraphQL</td>
         <td></td>
       </tr>
     </table>
