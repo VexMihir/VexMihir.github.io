@@ -10,7 +10,7 @@ class Background extends React.Component {
   <div class="section__title">Background</div>
   <div class="section__content">
     <p>
-      I'm currently a third year student at &nbsp;
+      I'm currently a fourth year student at &nbsp;
       <a class="underline-link" href="https://www.ubc.ca/" target="_blank"> University of British Columbia</a>
     </p>
 
